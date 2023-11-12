@@ -26,7 +26,7 @@ class Vector:
             return self.x*v.x+self.y*v.y+self.z*v.z
     def norme(self)->float:
 
-        return ((self.x)**2+(self.y)**2+(self.z)**2)**(1/2)
+        return ((self.x)**2+(self.y)**2+(self.z)**2)**(1/2) 
 
     def toplane(self) :
         return [int(self.x),int(self.y)]

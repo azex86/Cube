@@ -184,6 +184,7 @@ class parallelepipede(Forme):
     def isinc(self,cube)->bool:
         """Retourne si il y a ou non collision entre le cube self et le cube passer en argument"""
         assert isinstance(cube,parallelepipede)
+        assert isinstance(self,parallelepipede)
         v1_self=(self.points[1]-self.points[0])/(self.points[1]-self.points[0]).norme()
         v2_self=(self.points[3]-self.points[0])/(self.points[3]-self.points[0]).norme()
         v3_self=(self.points[4]-self.points[0])/(self.points[4]-self.points[0]).norme()
@@ -194,7 +195,7 @@ class parallelepipede(Forme):
         v_cube=(v1_cube,v2_cube,v3_cube)
         C_self=self.origin
         C_cube=cube.origin
-
+        #print(v1_self)
         #C_self = Vector(0,0,0)
         #for n in self.points:
         #    C_self+=n
